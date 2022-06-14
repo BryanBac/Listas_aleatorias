@@ -13,14 +13,23 @@ lista_bryan: List = ["https://youtu.be/XMeQeIG_rQg",
                      "https://youtu.be/9jvVBVcZ0-Y",
                      "https://youtu.be/BHncfQjJb_w",
                      "https://youtu.be/6CBp4qylX6I"]
-lista_ale: List = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+lista_ale: List = ["1",
+                   "2",
+                   "3",
+                   "4",
+                   "5",
+                   "6",
+                   "7",
+                   "8",
+                   "9",
+                   "10"]
 opcion: int = 0
 cantidad_de_vueltas: int = 9
 while opcion != 2:
-    print("######## Menu ########")
+    print("\n \033[0;34m" + "######## Menu ########" + "\033[0;m")
     print("1. Aleatorio")
     print("2. Salir")
-    opcion = int(input("Elija su opcion: "))
+    opcion = int(input("\033[0;32m" + "Ingrese su opción: " + "\033[0;m"))
     if opcion == 1:
         aleatorio_bryan: int = random.randint(0, cantidad_de_vueltas)
         aleatorio_ale: int = random.randint(0, cantidad_de_vueltas)
@@ -30,7 +39,7 @@ while opcion != 2:
             print("1. Reproducir Bryan")
             print("2. Reproducir Ale")
             print("3. Regresar al menu inicial")
-            opcion2 = int(input("Teclee"))
+            opcion2 = int(input("\033[0;32m" + "Ingrese su opción: " + "\033[0;m"))
             if opcion2 == 1:
                 rep.playonyt(lista_bryan[aleatorio_bryan])
                 lista_bryan.pop(aleatorio_bryan)
